@@ -5,9 +5,9 @@
 
 def recipe_batches(recipe, ingredients):
     batches = []
-    for k, v in recipe.items():
-        if ingredients.get(k) and recipe.get(k):
-            batches.append(ingredients[k] // recipe[k])
+    for key in recipe.keys():
+        if ingredients.get(key) and recipe.get(key):
+            batches.append(ingredients[key] // recipe[key])
         else:
             return 0
     return min(batches)
